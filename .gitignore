@@ -1,0 +1,19 @@
+# ---- never commit NVIDIA-copyrighted firmware / ROMs ----
+*.rom
+*.bin
+*.com
+*.tmp
+*.zip
+*.exe
+vbios_*
+
+# ---- large analysis outputs (regenerate locally) ----
+out/
+extracted/
+*.log
+__pycache__/
+
+# ---- Ghidra projects ----
+*.gpr
+*.rep/
+~*.dta

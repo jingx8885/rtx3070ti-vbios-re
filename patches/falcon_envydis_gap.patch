@@ -1,0 +1,33 @@
+--- a/envydis/falcon.c
++++ b/envydis/falcon.c
+@@ -369,6 +369,12 @@
+ 	{ 0x00000018, 0x0000003f, OP3B, N("ld"), T(sz), REG2, T(datari) },
+ 	{ 0x0000001c, 0x0000003f, OP3B, N("shlc"), T(sz), REG2, REG1, IMM8 },
+ 	{ 0x0000001d, 0x0000003f, OP3B, N("shrc"), T(sz), REG2, REG1, IMM8 },
++	{ 0x00000016, 0x0000003f, OP3B, U("alu16"), T(sz), REG2, REG1 },
++	{ 0x00000019, 0x0000003f, OP3B, U("alu19"), T(sz), REG2, REG1 },
++	{ 0x0000001a, 0x0000003f, OP3B, U("alu1a"), T(sz), REG2, REG1 },
++	{ 0x0000001b, 0x0000003f, OP3B, U("alu1b"), T(sz), REG2, REG1 },
++	{ 0x0000001e, 0x0000003f, OP3B, U("alu1e"), T(sz), REG2, REG1 },
++	{ 0x0000001f, 0x0000003f, OP3B, U("alu1f"), T(sz), REG2, REG1 },
+ 	{ 0x00000010, 0x00000030, OP3B, OOPS, T(sz), REG2, REG1 },
+ 
+ 	{ 0x00000020, 0x0000003f, OP4B, N("add"), T(sz), REG2, REG1, IMM16, .fmask = F_FUCOLD },
+@@ -382,6 +388,17 @@
+ 	{ 0x00000024, 0x0000003f, OP2B, N("cmpu"), T(sz), REG1, REG2, .fmask = F_FUC5P },
+ 	{ 0x00000025, 0x0000003f, OP2B, N("cmps"), T(sz), REG1, REG2, .fmask = F_FUC5P },
+ 	{ 0x00000026, 0x0000003f, OP2B, N("cmp"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x00000022, 0x0000003f, OP2B, U("cmp22"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x00000023, 0x0000003f, OP2B, U("cmp23"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x00000027, 0x0000003f, OP2B, U("cmp27"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x00000028, 0x0000003f, OP2B, U("cmp28"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x00000029, 0x0000003f, OP2B, U("cmp29"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x0000002a, 0x0000003f, OP2B, U("cmp2a"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x0000002b, 0x0000003f, OP2B, U("cmp2b"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x0000002c, 0x0000003f, OP2B, U("cmp2c"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x0000002d, 0x0000003f, OP2B, U("cmp2d"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x0000002e, 0x0000003f, OP2B, U("cmp2e"), T(sz), REG1, REG2, .fmask = F_FUC5P },
++	{ 0x0000002f, 0x0000003f, OP2B, U("cmp2f"), T(sz), REG1, REG2, .fmask = F_FUC5P },
+ 	{ 0x00000020, 0x00000030, OP2B, OOPS, T(sz), REG1, REG2, .fmask = F_FUC5P },
+ 
+ 
